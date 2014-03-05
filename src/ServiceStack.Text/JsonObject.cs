@@ -64,6 +64,9 @@ namespace ServiceStack.Text
 		}
 	}
 
+#if MONOTOUCH
+	[MonoTouch.Foundation.Preserve (AllMembers=true)]
+#endif
 	public class JsonObject : Dictionary<string, string>
 	{
         /// <summary>
@@ -140,6 +143,9 @@ namespace ServiceStack.Text
         }
     }
 
+#if MONOTOUCH
+	[MonoTouch.Foundation.Preserve (AllMembers=true)]
+#endif
 	public class JsonArrayObjects : List<JsonObject>
 	{
 		public static JsonArrayObjects Parse(string json)
